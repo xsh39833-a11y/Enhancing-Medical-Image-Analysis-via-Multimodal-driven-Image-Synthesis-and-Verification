@@ -1,0 +1,35 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.venv/
+venv/
+env/
+.conda/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs and outputs
+*.log
+runs/
+tensorboard/
+outputs/
+checkpoints/
+results/
+
+# Data and weights
+Datasets/
+data/
+pretrained/
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+
+# OS files
+.DS_Store
+Thumbs.db

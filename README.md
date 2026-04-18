@@ -48,8 +48,7 @@ The repository includes:
 ### 1. Clone the repository and install dependencies
 
 ```bash
-# replace <YOUR_GITHUB_REPO_URL> with the public GitHub repository URL
-git clone <YOUR_GITHUB_REPO_URL>
+git clone https://github.com/xsh39833-a11y/Enhancing-Medical-Image-Analysis-via-Multimodal-driven-Image-Synthesis-and-Verification.git
 cd multimodal-medical-image-synthesis
 conda env create -f environment.yml
 conda activate janusflow

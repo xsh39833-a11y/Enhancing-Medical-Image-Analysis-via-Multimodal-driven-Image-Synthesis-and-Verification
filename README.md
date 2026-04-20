@@ -49,7 +49,7 @@ The repository includes:
 
 ```bash
 git clone https://github.com/xsh39833-a11y/Enhancing-Medical-Image-Analysis-via-Multimodal-driven-Image-Synthesis-and-Verification.git
-cd multimodal-medical-image-synthesis
+cd Enhancing-Medical-Image-Analysis-via-Multimodal-driven-Image-Synthesis-and-Verification
 conda env create -f environment.yml
 conda activate janusflow
 ```
@@ -68,7 +68,6 @@ Download the released weights from Hugging Face:
 
 - `https://huggingface.co/franku123/medical-image-analysis-multimodal-synthesis-weights`
 
-Then place them under `checkpoints/` following the layout documented in `checkpoints/README.md`.
 
 ### 3. Prepare datasets
 
@@ -204,7 +203,7 @@ You can reproduce the environment with either Conda or pip.
 
 ```bash
 conda env create -f environment.yml
-conda activate med-image-synthesis
+conda activate janusflow
 ```
 
 ### Pip
@@ -276,8 +275,6 @@ checkpoints/
     └── sanet/
         └── model-200
 ```
-
-For a complete recommended checkpoint layout, see `checkpoints/README.md`.
 
 ## Provided Scripts
 
@@ -512,7 +509,7 @@ This open-source release consolidates the implementations used in our experiment
 ## Reproducibility Notes
 
 - Please update dataset paths, checkpoint paths, and output paths to match your local environment.
-- Released weights are hosted on Hugging Face and should be placed under `checkpoints/` following `checkpoints/README.md`.
+- Released weights are hosted on Hugging Face.
 - The shell scripts in `scripts/` are intentionally lightweight wrappers around the Python entry points in `src/`; you may either edit the scripts or call the Python modules directly.
 - Some original research code used environment-specific local paths. In this release, the main workflows have been refactored into reusable command-line interfaces for easier reproduction.
 - Reproducing one table in the paper usually requires only a subset of the full checkpoints and datasets; you do not need to download every released artifact unless you want the complete pipeline.

@@ -9,13 +9,13 @@ Xinran Niu<sup>1</sup>, Shihang Xia<sup>1</sup>, Dixin Luo<sup>1</sup>
 <sup>1</sup>Beijing Institute of Technology, China
 
 **Contact**  
-`xinran@bit.edu.cn`, `3220251366@bit.edu.cn`, `dxluo611@gmail.com`
+Please open a GitHub issue for questions about the public release.
 
 ## Quick Links
 
-- **Paper:** coming soon
-- **arXiv:** coming soon
-- **Project Page:** coming soon
+- **Paper:** to be added after publication
+- **arXiv:** to be added after public posting
+- **Project Page:** not available
 - **Weights:** `https://huggingface.co/franku123/medical-image-analysis-multimodal-synthesis-weights`
 - **Model Card:** `https://huggingface.co/franku123/medical-image-analysis-multimodal-synthesis-weights`
 
@@ -198,13 +198,13 @@ multimodal-medical-image-synthesis/
 
 ## Environment
 
-Experiments were conducted in a Conda environment named `janusflow`. You can reproduce the environment with either Conda or pip.
+You can reproduce the environment with either Conda or pip.
 
 ### Conda
 
 ```bash
 conda env create -f environment.yml
-conda activate janusflow
+conda activate med-image-synthesis
 ```
 
 ### Pip
@@ -225,9 +225,6 @@ This release assumes the following local organization:
 
 ### 1. Polyp segmentation
 
-Original local dataset used by the author:
-- `/home/xinran/xinran/data/polyp`
-
 Expected structure:
 
 ```text
@@ -246,9 +243,6 @@ data/polyp/
 ```
 
 ### 2. Skin disease classification
-
-Original local dataset used by the author:
-- `/home/xinran/xinran/data/skincon`
 
 Expected structure:
 
@@ -517,23 +511,28 @@ This open-source release consolidates the implementations used in our experiment
 
 ## Reproducibility Notes
 
-- Please update all model and dataset paths to your own environment.
-- Some original scripts contained hard-coded local paths; these were converted into CLI arguments in this release.
-- The release keeps the original research logic as much as possible while making the code easier to run and share.
+- Please update dataset paths, checkpoint paths, and output paths to match your local environment.
+- Released weights are hosted on Hugging Face and should be placed under `checkpoints/` following `checkpoints/README.md`.
+- The shell scripts in `scripts/` are intentionally lightweight wrappers around the Python entry points in `src/`; you may either edit the scripts or call the Python modules directly.
+- Some original research code used environment-specific local paths. In this release, the main workflows have been refactored into reusable command-line interfaces for easier reproduction.
+- Reproducing one table in the paper usually requires only a subset of the full checkpoints and datasets; you do not need to download every released artifact unless you want the complete pipeline.
 
 ## Citation
 
-If you use this repository in your research, please cite the corresponding paper.
+If you find this repository useful in your research, please cite the paper and software release.
+
+You can also use the citation metadata provided in `CITATION.cff`.
 
 ```bibtex
-@article{multimodal_medical_synthesis_2025,
-  title={Multimodal-Driven Image Synthesis with Task-Aware Verification for Medical Image Analysis},
-  author={Anonymous},
-  journal={To appear},
-  year={2025}
+@misc{niu2026enhancing,
+  title={Enhancing Medical Image Analysis via Multimodal-driven Image Synthesis and Verification},
+  author={Xinran Niu and Shihang Xia and Dixin Luo},
+  year={2026},
+  note={Code release and model weights},
+  howpublished={\url{https://github.com/xsh39833-a11y/Enhancing-Medical-Image-Analysis-via-Multimodal-driven-Image-Synthesis-and-Verification}}
 }
 ```
 
 ## License
 
-Please attach the final open-source license selected for your paper submission and institutional policy before public release.
+This project is released under the MIT License. See the `LICENSE` file for details.

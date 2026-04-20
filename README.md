@@ -18,6 +18,7 @@ Please open a GitHub issue for questions about the public release.
 - **Project Page:** not available
 - **Weights:** `https://huggingface.co/franku123/medical-image-analysis-multimodal-synthesis-weights`
 - **Model Card:** `https://huggingface.co/franku123/medical-image-analysis-multimodal-synthesis-weights`
+- **Dataset:** `https://huggingface.co/datasets/franku123/medical-image-analysis-multimodal-synthesis-data`
 
 ## Overview
 
@@ -71,7 +72,12 @@ Download the released weights from Hugging Face:
 
 ### 3. Prepare datasets
 
-Prepare the two datasets used in this release:
+
+The processed datasets used in this release are available at:
+
+- `https://huggingface.co/datasets/franku123/medical-image-analysis-multimodal-synthesis-data`
+
+Prepare the two datasets under the following local paths:
 
 - `data/polyp/` for segmentation
 - `data/skincon/` for diagnosis
@@ -216,7 +222,11 @@ pip install -r requirements.txt
 
 ## Data Preparation
 
-This release assumes the following local organization:
+The processed dataset release is hosted on Hugging Face:
+
+- `https://huggingface.co/datasets/franku123/medical-image-analysis-multimodal-synthesis-data`
+
+After downloading the dataset files, organize them locally as follows:
 
 - `data/` stores the raw datasets and jsonl metadata files
 - `checkpoints/` stores downloaded released weights and backbone checkpoints
@@ -510,6 +520,7 @@ This open-source release consolidates the implementations used in our experiment
 
 - Please update dataset paths, checkpoint paths, and output paths to match your local environment.
 - Released weights are hosted on Hugging Face.
+- The processed datasets are hosted on Hugging Face: `https://huggingface.co/datasets/franku123/medical-image-analysis-multimodal-synthesis-data`.
 - The shell scripts in `scripts/` are intentionally lightweight wrappers around the Python entry points in `src/`; you may either edit the scripts or call the Python modules directly.
 - Some original research code used environment-specific local paths. In this release, the main workflows have been refactored into reusable command-line interfaces for easier reproduction.
 - Reproducing one table in the paper usually requires only a subset of the full checkpoints and datasets; you do not need to download every released artifact unless you want the complete pipeline.
